@@ -73,6 +73,13 @@ COMMON_GLOBAL_CFLAGS             += -DUSES_TI_MAC80211
 TARGET_KERNEL_SOURCE := kernel/htc/endeavoru
 TARGET_KERNEL_CONFIG := cyanogenmod_endeavoru_defconfig
 
+# ROM toolchain
+TARGET_GCC_VERSION_EXP := 4.8
+
+# Custom Kernel Toolchain
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9/bin
+
 # Building wifi modules
 TARGET_MODULES_SOURCE := "kernel/htc/endeavoru/drivers/net/wireless/compat-wireless_R5.SP2.03"
 TARGET_MODULES_SOURCE_DIR := "compat-wireless_R5.SP2.03"
